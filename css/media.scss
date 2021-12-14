@@ -1,0 +1,72 @@
+$smallMobileMaxScreenWidth: 374px; /* iphone5 */
+$mobileMinScreenWidth: 375px;
+$mobileMaxScreenWidth: 767px;
+$tabletMinScreenWidth: 768px;
+$tabletMaxScreenWidth: 1024px;
+$smallDesktopMinScreenWidth: 1025px;
+$smallDesktopMaxScreenWidth: 1279px;
+$midDesktopMinScreenWidth: 1280px;
+$midDesktopMaxScreenWidth: 1365px;
+$largeDesktopMinScreenWidth: 1366px;
+$largeDesktopMaxScreenWidth: 1919px;
+$extraLargeDesktopMinScreenWidth: 1920px;
+
+@mixin smallMobileScreenOnly {
+  @media (max-width: $smallMobileMaxScreenWidth) {
+    @content;
+  }
+}
+
+@mixin mobileScreenOnly {
+  @media (min-width: $mobileMinScreenWidth) and (max-width: $mobileMaxScreenWidth) {
+    @content;
+  }
+}
+
+@mixin tabletScreen {
+  @media (min-width: $tabletMinScreenWidth) {
+    @content;
+  }
+}
+
+@mixin tabletScreenOnly {
+  @media (min-width: $tabletMinScreenWidth) and (max-width: $tabletMaxScreenWidth) {
+    @content;
+  }
+}
+
+@mixin mobileAndTabletScreenOnly {
+  @media (max-width: $tabletMaxScreenWidth) {
+    @content;
+  }
+}
+
+@mixin smallDesktopScreen {
+  @media (min-width: $smallDesktopMinScreenWidth) {
+    @content;
+  }
+}
+
+@mixin smallDesktopScreenOnly {
+  @media (min-width: $smallDesktopMinScreenWidth) and (max-width: $smallDesktopMaxScreenWidth) {
+    @content;
+  }
+}
+
+@mixin midDesktopScreen {
+  @media (min-width: $midDesktopMinScreenWidth) {
+    @content;
+  }
+}
+
+@mixin largeDesktopScreen {
+  @media (min-width: $largeDesktopMinScreenWidth) {
+    @content;
+  }
+}
+
+@mixin extraLargeDesktopScreen {
+  @media (min-width: $extraLargeDesktopMinScreenWidth) {
+    @content;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../variables';
+@import '../media';
+
+.header {
+  /* styles here */
+
+  @include tabletScreen {
+    /* styles here */
+  }
+
+  @include smallDesktopScreen {
+    /* styles here */
+  }
+}
