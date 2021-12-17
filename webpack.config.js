@@ -1,14 +1,34 @@
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+
+let mode = 'development';
+
+if (process.env.NODE_ENV === 'production') {
+  mode = 'production';
+}
+
+console.log(mode + ': mode');
 
 module.exports = {
   entry: {
-    main: './js/scripts.js',
+    main: path.resolve(__dirname, './src/js/scripts.js'),
   },
-  mode: 'development',
+  mode: mode,
   output: {
-    path: `${__dirname}/dist`,
-    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
+    compress: true,
+    port: 4200,
+  },
+  devtool: 'source-map',
   module: {
     rules: [
       {
@@ -23,6 +43,67 @@ module.exports = {
         },
       },
       {
+        test: /\.(sa|sc|c)ss$/,
+        use: [
+          mode === 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['postcss-preset-env', {}]],
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[hash][ext][query]',
+        },
+      },
+      {
+        test: /\.(woff2?|ttf|eot)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]',
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+        options: {
+          minimize: {
+            caseSensitive: true,
+            conservativeCollapse: true,
+            keepClosingSlash: true,
+            minifyCSS: true,
+            minifyJS: true,
+            removeComments: false,
+            collapseWhitespace: false,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+          },
+        },
+      },
+    ],
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+    }),
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './index.html',
+    }),
+  ],
+};
+
+/*      {
         test: /\.s?css$/,
         exclude: /node_modules/,
         use: [
@@ -43,26 +124,4 @@ module.exports = {
             loader: 'postcss-loader',
           },
         ],
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[hash][ext][query]',
-        },
-      },
-      {
-        test: /\.(woff2?|ttf|eot)$/i,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[hash][ext][query]',
-        },
-      },
-    ],
-  },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'styles.css',
-    }),
-  ],
-};
+      }, */
