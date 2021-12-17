@@ -102,26 +102,3 @@ module.exports = {
     }),
   ],
 };
-
-/*      {
-        test: /\.s?css$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: `./`,
-            },
-          },
-
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: 'postcss-loader',
-          },
-        ],
-      }, */

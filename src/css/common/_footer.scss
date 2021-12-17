@@ -1,18 +1,6 @@
 @import '../variables';
 @import '../media';
 
-/* .footer {
-  styles here
-
-  @include tabletScreen {
-    styles here
-  }
-
-  @include smallDesktopScreen {
-    styles here
-  }
-} */
-
 .footer {
   &__body {
     padding: 8px 0px 12px 0px;

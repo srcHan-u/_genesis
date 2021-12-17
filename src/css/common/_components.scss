@@ -125,7 +125,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 0px;
-  /* .search-field__input */
 
   &__input {
     width: 100%;
@@ -140,8 +139,6 @@
     background: url('../assets/img/common/Search.svg') no-repeat 12px center #f5f5f5;
     background-size: 16px;
     padding-left: 36px;
-    // margin-left: 30px;
-    // opacity: 0.3;
     &:focus {
       opacity: 1;
       font-family: 'SourceSans-regular';
@@ -149,8 +146,6 @@
       background-image: none;
     }
   }
-
-  /* .search-field__settings-button */
 
   &__settings-button {
     display: block;
