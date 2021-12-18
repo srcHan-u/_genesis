@@ -1,3 +1,4 @@
+// todo move to defaults
 #homepage {
   color: #000;
   font-size: 22px;
@@ -27,12 +28,14 @@
   padding: 0 16px;
 }
 
+// todo fd remove the class or use an alternative
 .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+// todo fd make burger-menu
 .burger-menu {
 }
 
@@ -114,7 +117,7 @@
   }
 
   &__post {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
 }
 
@@ -138,6 +141,7 @@
     line-height: 16px;
     background: url('../assets/img/common/Search.svg') no-repeat 12px center #f5f5f5;
     background-size: 16px;
+    margin-left: 15px;
     padding-left: 36px;
     &:focus {
       opacity: 1;
