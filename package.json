@@ -46,7 +46,8 @@
     "wepack-cli": "0.0.1-security"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "gh-pages": "^2.0.1"
   },
   "husky": {
     "hooks": {
