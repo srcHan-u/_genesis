@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const fs = require('fs');
 
 let mode = 'development';
 
@@ -9,7 +10,19 @@ if (process.env.NODE_ENV === 'production') {
   mode = 'production';
 }
 
+const PATHS = {
+  src: path.join(__dirname, '/src'),
+  dist: path.join(__dirname, '/dist'),
+  assets: 'pages/',
+};
+
+const PAGES_DIR = `${PATHS.src}/${PATHS.assets}`;
+const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
+
 console.log(mode + ': mode');
+console.log(PATHS);
+console.log(PAGES_DIR);
+console.log(PAGES);
 
 module.exports = {
   entry: {
@@ -25,10 +38,15 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
+    open: ['pages/index.html'],
+    liveReload: true,
     compress: true,
-    port: 4200,
+    port: 4600,
   },
   devtool: 'source-map',
+  stats: {
+    children: true,
+  },
   module: {
     rules: [
       {
@@ -90,6 +108,18 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.pug$/,
+        loader: 'pug-loader',
+        //   use:[
+        //       {loader: 'html-loader'},
+        //       {loader: 'pug-html-loader'},
+        //   ],
+        //   options:{
+        //       pretty: true,
+        //   },
+        exclude: /(node_modules|bower_components)/,
+      },
     ],
   },
   plugins: [
@@ -98,7 +128,15 @@ module.exports = {
     }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: 'src/index.pug',
+      fileName: 'index.html',
     }),
+    ...PAGES.map(
+      (page) =>
+        new HtmlWebpackPlugin({
+          template: `${PAGES_DIR}/${page}`,
+          filename: `pages/${page.replace(/\.pug/, '.html')}`,
+        }),
+    ),
   ],
 };

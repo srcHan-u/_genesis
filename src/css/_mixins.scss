@@ -1,0 +1,10 @@
+/* generating background images */
+$icons: 'calendar-gray', 'feedback', 'help', 'clubs';
+
+@mixin icon($icon-name, $oder) {
+  &:nth-child(#{$oder}) {
+    padding-left: 30px;
+    // background-size: 18px ;
+    background: left/16px url('../assets/img/common/#{$icon-name}-icon.svg') no-repeat;
+  }
+}

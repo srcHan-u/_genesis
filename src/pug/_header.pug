@@ -1,0 +1,42 @@
+header.header
+        .container
+          .header__body
+            nav.header__nav.menu
+              ul.menu__list
+                +link-image("buttonOpen",'menu__button button-open', "#", "common", "menu-open.svg")
+                .logo.header__logo
+                  a.logo__link(href='#')
+                    img(src=require("./assets/img/common/Logo.svg"), alt="logo")
+                input.login-button.header__login-button(type='submit' name='login-button' value='Вход')
+            #burgerMenu.burger-menu
+                .burger-menu__header.burger-header
+                    ul.burger-header__list
+                        li.burger-header__item
+                            +link-image("buttonClosed",'menu__button_closed button-closed', "#", "common", "menu-closed.svg")
+                        li.burger-header__item
+                            .burger-header__localization-control.localization-control
+                                .localization-control__box
+                                    input#rus(type="radio" name="language" value="Рус" checked)
+                                    label(for="rus")|Рус
+                                .localization-control__box
+                                    input#ukr(type="radio" name="language" value="Укр")
+                                    label(for="ukr")|Укр 
+                .burger-menu__body.burger-body
+                    nav.burger-body__nav
+                        ul.burger-body__list
+                            li.burger-body__item
+                                a.burger-body__link(href="#")|Календарь  
+                            li.burger-body__item
+                                a.burger-body__link(href="#")|Обратная связь  
+                            li.burger-body__item
+                                a.burger-body__link(href="#")|Помощь  
+                            li.burger-body__item
+                                a.burger-body__link(href="#")|Публичные клубы
+                .burger-menu__footer.burger-footer
+                    ul.burger-footer__list
+                        li.burger-footer__item
+                            input.login-button.burger-footer__login-button(type='submit' name='login-button' value='Вход') 
+                        li.burger-footer__item
+                            input.registration-button.burger-footer__registration-button(type='submit' name='login-registration' value='Регистрация') 
+
+

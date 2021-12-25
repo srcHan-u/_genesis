@@ -1,0 +1,7 @@
+//- mixin image(path,name,href = '#',)
+//-     a(href=`${href}`)
+//-         img(src=require(`./assets/img/${path}/${name}`) alt=name)
+
+mixin link-image(id="",className,href,path,name)
+    a(id=id class=className href=`${href}`)
+        img(src=require(`./assets/img/${path}/${name}`), alt=name) 

@@ -1,8 +1,5 @@
 import '../css/index.scss';
+import './_burger.js';
+// import './global-pages.pug'
 
-(function ($) {
-  console.log('hello world');
-  let a = 4;
-  let b = 5;
-  console.log(a + b);
-})(jQuery);
+(function ($) {})(jQuery);

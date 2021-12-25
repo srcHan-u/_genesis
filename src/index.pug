@@ -1,0 +1,80 @@
+include pug/libs/_libs
+
+doctype html
+html(lang='en')
+  include pug/_head.pug 
+  body#homepage
+    .wrapper 
+      include pug/_header.pug
+      main.page
+        section.page__events.events
+          .container
+            .events__body
+              .events__row
+                .events__col-10
+                  form.header__search-field.search-field(action='#')
+                    input.search-field__input(type='search' placeholder='Поиск')
+                    input.search-field__settings-button(type='button')
+              .events__row
+                .events__col-12
+                  ul.article-list
+                    article.article-list__item
+                      figure.article-list__post.post-events
+                        +link-image("","post-events__image","./pages/_event-1.html", "homepage/events", "image-events-1.png")
+                        h3.post-events__heading
+                          | Чемпіонат України з бойового самбо у розділах Лайт та Класичне
+                        .box-icon
+                          .box-icon__pin
+                            img.box-icon__image(src=require("./assets/img/common/Pin.svg"), alt="pin")
+                            span.box-icon__text Днепропетровск
+                          .box-icon__union
+                            span.box-icon__text 12 октября 2021
+                            img.box-icon__image(src=require("./assets/img/common/Union.svg"), alt="union")
+                    article.article-list__item
+                      figure.article-list__post.post-events
+                        +link-image("","post-events__image","./pages/event/event-1.pug", "homepage/events", "image-events-2.png")
+                        h3.post-events__heading BRAVE KIDS PRO OPEN CHAMPIONSHIP
+                        .box-icon
+                          .box-icon__pin
+                            img.box-icon__image(src=require("./assets/img/common/Pin.svg"), alt="pin")
+                            span.box-icon__text Киев
+                          .box-icon__union
+                            span.box-icon__text 17 октября 2021
+                            img.box-icon__image(src=require("./assets/img/common/Union.svg"), alt="union")
+                    article.article-list__item
+                      figure.article-list__post.post-events
+                        +link-image("","post-events__image","./pages/event/event-1.pug", "homepage/events", "image-events-3.png")
+                        h3.post-events__heading Extreme Cage Fighting | Rage In The Cage
+                        .box-icon
+                          .box-icon__pin
+                            img.box-icon__image(src=require("./assets/img/common/Pin.svg"), alt="pin")
+                            span.box-icon__text Киев
+                          .box-icon__union
+                            span.box-icon__text 20 октября 2021
+                            img.box-icon__image(src=require("./assets/img/common/Union.svg"), alt="union")
+                    article.article-list__item
+                      figure.article-list__post.post-events
+                        +link-image("","post-events__image","./pages/event/event-1.pug", "homepage/events", "image-events-4.png")
+                        h3.post-events__heading The Martial Arts World Showcase 2021 - Series #5
+                        .box-icon
+                          .box-icon__pin
+                            img.box-icon__image(src=require("./assets/img/common/Pin.svg"), alt="pin")
+                            span.box-icon__text Житомир
+                          .box-icon__union
+                            span.box-icon__text 23 октября 2021
+                            img.box-icon__image(src=require("./assets/img/common/Union.svg"), alt="union")
+                    article.article-list__item
+                      figure.article-list__post.post-events
+                        +link-image("","post-events__image","./pages/event/event-1.pug", "homepage/events", "image-events-5.png")
+                        h3.post-events__heading BSB JJ 3 открытый чемпионат
+                        .box-icon
+                          .box-icon__pin
+                            img.box-icon__image(src=require("./assets/img/common/Pin.svg"), alt="pin")
+                            span.box-icon__text Павлоград
+                          .box-icon__union
+                            span.box-icon__text 12 ноября 2021
+                            img.box-icon__image(src=require("./assets/img/common/Union.svg"), alt="unio")
+    //- footer
+    include pug/_footer.pug
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js')

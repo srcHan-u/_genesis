@@ -34,6 +34,119 @@
 }
 
 .burger-menu {
+  width: 280px;
+  min-height: 568px;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  background-color: #fafafa;
+  opacity: 0;
+  z-index: 50;
+  &__header {
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    padding: 20px 0px;
+  }
+  &__body {
+    box-shadow: inset 0px -1px 0px #e6e6e6;
+  }
+  &__footer {
+  }
+}
+.burger-header {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 248px;
+    margin: 0 auto;
+  }
+  &__item {
+  }
+}
+.menu-button {
+  &_closed {
+    padding: 20px 0px;
+  }
+}
+.button-open {
+  display: block;
+}
+.button-closed {
+  display: block;
+}
+
+.localization-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__box {
+  }
+  > #rus {
+    border: none;
+    outline: none;
+  }
+  > #ukr {
+  }
+}
+
+.burger-body {
+  &__nav {
+    padding: 16px 0px 292px 0px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+    max-width: 248px;
+    margin: 0 auto;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    @include icon(nth($icons, 1), 1);
+    @include icon(nth($icons, 2), 2);
+    @include icon(nth($icons, 3), 3);
+    @include icon(nth($icons, 4), 4);
+    &:nth-child(3) {
+      background-size: 19px;
+    }
+  }
+  &__link {
+    display: block;
+    line-height: 24px;
+    color: $primary-dark;
+    opacity: 0.7;
+    &:hover {
+      font-weight: 600;
+      opacity: 1;
+      transition: 0.2s;
+    }
+  }
+}
+.burger-footer {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 248px;
+    margin: 0 auto;
+    padding: 16px 0px 20px 0px;
+  }
+  &__item {
+    &:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+  &__login-button {
+    width: 50px;
+    height: 28px;
+  }
+  &__registration-button {
+    width: 93px;
+    height: 28px;
+  }
 }
 
 .logo {
@@ -57,12 +170,40 @@
   color: $primary-dark;
   background-color: initial;
   cursor: pointer;
+  &:hover {
+    transition: 0.7s;
+    background-color: $button-red;
+    color: $color-white;
+    transform: translateY(4px);
+  }
+}
+.registration-button[type='submit'] {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: calc(50% - 28px / 2);
+  border: 1px solid #9f9f9f;
+  border-radius: 4px;
+  font-family: 'SourceSans-semibold';
+  font-size: 12px;
+  line-height: 16px;
+  color: $primary-dark;
+  background-color: initial;
+  cursor: pointer;
+  &:hover {
+    transition: 0.7s;
+    background-color: $button-silver;
+    color: $color-white;
+    transform: translateY(4px);
+  }
 }
 
 .post-events {
   &__image {
-    padding-bottom: 12px;
+    margin-bottom: 12px;
     border-radius: 4px 4px;
+    display: block;
   }
 
   &__heading {
@@ -107,14 +248,14 @@
 
 .article-list {
   &__item {
-    padding-top: 16px;
+    margin-top: 16px;
     max-width: 288px;
     background: #ffffff;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
   }
 
   &__post {
-    margin-bottom: 12px;
+    padding-bottom: 12px;
   }
 }
 
@@ -138,7 +279,7 @@
     line-height: 16px;
     background: url('../assets/img/common/Search.svg') no-repeat 12px center #f5f5f5;
     background-size: 16px;
-    margin-left: 15px;
+    // margin-left: 15px;
     padding-left: 36px;
     &:focus {
       opacity: 1;
