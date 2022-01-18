@@ -1,0 +1,26 @@
+include ./components/navigation-components/items/item-result-person/item-result-person.pug
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include ./components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__results-details.results-details
+                ._container 
+                    .results-details__body
+                        .results-details__row.results-details__row_margin_bottom_16
+                            .results-details__col-12
+                                a.results-details__link._icon-arow(href="./event-registration_2.html")|Дівчата молодшого віку
+                        .results-details__row
+                            .results-details__col-12
+                                ul.results-details__list
+                                    li.results-details__item 
+                                        +item-result-person('Кулакова Аліна', '26 лет, Киев', 'Гречка С.А.', '_icon-cup item-result-person__col-10_icon_gold')
+                                    li.results-details__item 
+                                        +item-result-person('Кулакова Аліна', '26 лет, Киев', 'Гречка С.А.', '_icon-cup item-result-person__col-10_icon_silver')
+                                    li.results-details__item 
+                                        +item-result-person('Кулакова Аліна', '26 лет, Киев', 'Гречка С.А.', '_icon-cup item-result-person__col-10_icon_bronze')
+                                    li.results-details__item 
+                                        +item-result-person('Кулакова Аліна', '26 лет, Киев', 'Гречка С.А.', 'item-result-person__col-10_icon_place_4')
+                                    li.results-details__item 
+                                        +item-result-person('Кулакова Аліна', '26 лет, Киев', 'Гречка С.А.', 'item-result-person__col-10_icon_place_5')

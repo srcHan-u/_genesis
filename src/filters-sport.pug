@@ -1,0 +1,19 @@
+- var href_link = './filters.html'
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/header/header-inside/header-inside.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        main#ipage.page
+            section.page__filters-sport.filters-sport
+                form.filters-sport__form(action="#" method='POST')
+                    +header-inside('Вид спорта',href_link)
+                    ul.filters-sport__list
+                     - var item_list_headings = ['Самбо','Бокс','Карате','ММА','Кик-боксинг','Панкратион','Дзюдо','Макраме']
+                        each val in item_list_headings 
+                            +item-list(val)
+                    .filters-sport__row.filters-sport__row_bg_white
+                        +primary-button(button_size_max, 'Показать', 'submit')

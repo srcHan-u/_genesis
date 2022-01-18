@@ -1,0 +1,23 @@
+//- save this
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/navigation-components/buttons/side-menu-button/side-menu-button.pug
+include ./components/cards/calendar-day/calendar-day.pug
+include ./components/cards/card-events/card-events.pug
+include ./components/head/head.pug
+//- 
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-default/header-default.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        include ./components/navigation-components/search-form/search-form.pug
+        main#ipage.page
+            section.page__events.events
+                ._container
+                    .events__body
+                        .events__row
+                            .events__col-12
+                                ul.events__list
+                                    each val in card_events_properties
+                                        li.events__item
+                                            +card-events(val.heading, val.image, val.href)
+        include ./components/footer/footer.pug

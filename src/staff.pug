@@ -1,0 +1,32 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-federetion/card-federetion.pug
+include ./components/cards/card-sportsmen/card-sportsmen.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__staff.staff
+                ._container
+                    .staff__body
+                        .staff__row
+                            .staff__col-10 
+                                h3.staff__heading|Ученики
+                                a.staff__link._icon-search(href='#')
+                                a.staff__link._icon-add(href='#')
+                        .staff__row.staff__row_margin_less_top-bottom
+                            .staff__col-12 
+                                include ./components/navigation-components/tabs/single-tab/single-tab.pug
+                        .staff__row.staff__row_margin_top-bottom
+                            .staff__col-12
+                                ul.staff__list
+                                    each val in card_sportsmen_date
+                                        li.staff__item
+                                            +card-sportsmen(val.image, val.heading, val.label)
+        footer.staff__footer 
+            .staff__footer-row 
+                .staff__footer-col-12
+                    include ./components/navigation-components/tab-bar/tab-bar.pug

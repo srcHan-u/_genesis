@@ -1,0 +1,25 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-federetion/card-federetion.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include ./components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__federation.federation
+                ._container
+                    .federation__body
+                        .federation__row
+                            .federation__col-12 
+                                h3.federation__heading|Федерации
+                        .federation__row 
+                            .federation__col-12
+                                - var isTrue = true;
+                                +card-federation('card-federation-avatar-1','Руководитель', 'Артур Булыгин', 2)
+                            
+        footer.federation__footer 
+            .federation__footer-row 
+                .federation__footer-col-12
+                    include ./components/navigation-components/tab-bar/tab-bar.pug

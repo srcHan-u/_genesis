@@ -1,0 +1,54 @@
+
+.tab-bar {
+	padding: 8px 16px 20px 16px;
+    background-color: $color-white;
+	&__list {
+        max-width: 288px;
+        margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__item {
+		flex: 0 1 10%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	&__link {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+        
+		&:active {
+			color: $button-red;
+		}
+		&:focus {
+			color: $button-red;
+			transition: 1s;
+			transform: scale(1.2);
+		}
+		&:hover {
+			color: $button-red;
+			transition: 1s;
+			transform: scale(0.8);
+		}
+	}
+    @each $n, $icon in (1: 'user-tab-menu', 2: 'calendar-tab-menu', 3: 'grid-tab-menu', 4: 'clubs-tab-menu', 5: 'team-tab-menu', 6: 'list-tab-menu') {
+        &__item{
+            &:nth-child(#{$n}){
+                >a{
+                    &::before{
+                        content: url('../images/svg/#{$icon}.svg');
+                    }
+                }
+            }
+        }
+    }
+	&__text {
+		font-size: 10px;
+		line-height: 16px;
+	}
+}

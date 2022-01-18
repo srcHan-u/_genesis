@@ -1,0 +1,38 @@
+.card-sportsmen {
+	background: #ffffff;
+	border-radius: 4px;
+	&__body {
+		padding: 8px 12px;
+	}
+	&__row {
+		@include row;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__col-1 {
+		@include column(10%);
+        display: flex;
+        justify-content: flex-start;
+	}
+	&__col-2 {
+	}
+	&__col-6 {
+		padding: 0px 10px 0px 8px;
+		@include column(60%);
+	}
+	&__col-3 {
+		@include column(15%);
+		text-align: right;
+	}
+	&__heading {
+		@include h3;
+	}
+	&__label {
+		font-size: 12px;
+		font-weight: 600;
+		color: rgba($color: $primary-dark, $alpha: 0.6);
+	}
+	&__additional-menu {
+		padding: 5px 10px;
+	}
+}

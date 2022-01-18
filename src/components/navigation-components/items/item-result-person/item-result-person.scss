@@ -1,0 +1,76 @@
+.item-result-person {
+	&__body {
+		padding: 8px 12px 8px 40px;
+		background: #ffffff;
+		border-radius: 4px;
+	}
+	&__row {
+		@include row;
+		align-items: center;
+	}
+	&__col-10 {
+		@include column(76%);
+		position: relative;
+		&::before {
+			position: absolute;
+			top: 40%;
+			right: 105%;
+			width: 16px;
+			height: 16px;
+			font-size: 14px;
+		}
+		&_icon_gold {
+			color: #ffa800;
+		}
+		&_icon_silver {
+			color: #bcbcbc;
+		}
+		&_icon_bronze {
+			color: #f08142;
+		}
+		&_icon_place_4 {
+			&::before {
+				content: '4';
+				display: flex;
+				justify-content: center;
+				align-items: center;
+                background: #ececec;
+				border-radius: 2px;
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 16px;
+				color: $primary-dark;
+			}
+		}
+		&_icon_place_5 {
+			&::before {
+				content: '5';
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #ececec;
+				border-radius: 2px;
+				font-weight: 600;
+				font-size: 12px;
+				line-height: 16px;
+				color: $primary-dark;
+			}
+		}
+	}
+	&__col-2 {
+		@include column(24%);
+		display: flex;
+		justify-content: flex-end;
+		padding-left: 12px;
+	}
+	&__title {
+		@include h3;
+		color: $primary-dark;
+	}
+	&__label {
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 16px;
+		color: rgba($color: $primary-dark, $alpha: 0.6);
+	}
+}

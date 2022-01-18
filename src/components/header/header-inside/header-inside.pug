@@ -1,0 +1,12 @@
+include ../../navigation-components/buttons/filter-button/filter-button.pug
+include ../../navigation-components/buttons/button/button.pug
+
+mixin header-inside(title, href)
+    header.header-inside
+        .header-inside__body
+            nav.header-inside__nav 
+                ul.header-inside__list 
+                    li.header-inside__item
+                        +filter-button(title, href)
+                    li.header-inside__item
+                        +primary-button(button_size_medium, text_reset, 'reset')

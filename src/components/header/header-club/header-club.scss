@@ -1,0 +1,45 @@
+.header-club {
+    background-color: $color-white;
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+	&__body {
+		padding: 12px 0px;
+	}
+	&__nav {
+	}
+	&__list {
+		@include row;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	&__item {
+	}
+	&__burger {
+		position: relative;
+		top: 0;
+		left: 0;
+		width: 24px;
+		height: 24px;
+		&::before {
+			content: '';
+			background: url('../images/svg/burger.svg') no-repeat;
+            background-size: 24px;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			top: 0;
+			left: 0;
+		}
+	}
+	&__button-user {
+		width: 24px;
+		height: 24px;
+		border-radius: 4px;
+        position: relative;
+        &::before{
+            position: absolute;
+            font-size: 24px;
+            top: 1px;
+            right: 0;
+        }
+	}
+}

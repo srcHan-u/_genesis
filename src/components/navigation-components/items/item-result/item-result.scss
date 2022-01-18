@@ -1,0 +1,83 @@
+.item-result {
+	padding: 12px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+	&__header {
+	}
+	&__body {
+	}
+}
+.header-item-result {
+	&__row {
+		@include row;
+		padding-bottom: 8px;
+        border-bottom: 1px solid rgba($color: #B7B7B7, $alpha: 0.2);
+	}
+	&__col-12 {
+		@include column(100%);
+		display: flex;
+		flex-direction: column;
+	}
+	&__label {
+		font-size: 14px;
+		line-height: 16px;
+		color: rgba($color: $primary-dark, $alpha: 0.7);
+		padding-bottom: 4px;
+	}
+	&__title {
+		@include h3;
+		line-height: 16px;
+	}
+}
+.body-item-result {
+	&__row {
+		@include row;
+		padding-top: 8px;
+        // align-items: center;
+        // min-height: fit-content;
+	}
+	&__col-11 {
+        @include column(90%);
+        // min-height: fit-content;
+	}
+	&__col-1 {
+        @include column(10%);
+        display: flex;
+        align-items: center;
+	}
+	&__list {
+		display: flex;
+		flex-direction: column;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+        @each $index, $color in (1, #FFA800)(2, #BCBCBC) (3, #F08142){
+            &:nth-child(#{$index}){
+                &::before{
+                    color: $color;
+                }
+            }
+        } 
+	}
+	&__button {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+
+		&::before {
+			font-size: 20px;
+            transform: rotate(-90deg)
+		}
+	}
+    &__heading {
+        @include h3;
+        padding-left: 8px;
+        line-height: 20px;
+    }
+}

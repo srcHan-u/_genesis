@@ -1,0 +1,15 @@
+include ../calendar-day/calendar-day.pug
+- var card_calendar_event_date_1 = [{text: 'Настольный теннис', icon: '_icon-tennis'},{text: 'Київ, Украина', icon: '_icon-pin'}];
+- var card_calendar_event_date_2 = [{text: 'Боевое самбо', icon: '_icon-tennis'},{text: 'Київ, Украина', icon: '_icon-pin'}];
+- var card_calendar_event_heading = 'Турніру серед співробітників коворкінгу IHub з настільного тенісу';
+mixin card-calendar-event(heading, color, day, months, date, modificator)
+    article.card-calendar-event(class=modificator)
+        .card-calendar-event__body
+            .card-calendar-event__row 
+                .card-calendar-event__col-2
+                    +calendar-day(color, day, months)
+                .card-calendar-event__col-9
+                        h3.card-calendar-event__heading|#{heading}
+                        each val in date
+                            p.card-calendar-event__label(class=val.icon)|#{val.text}
+

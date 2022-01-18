@@ -1,0 +1,93 @@
+.download-section {
+	width: 100%;
+	height: 100%;
+	&_active {
+		background-color: rgba($color: #000000, $alpha: 0.4);
+		position: fixed;
+		top: 0;
+		left: 0;
+        transition: 1s;
+	}
+	&_disable {
+		background-color: rgba($color: #000000, $alpha: 0);
+		position: fixed;
+		top: 0;
+		left: 110%;
+        transition: 1s;
+	}
+
+	&__form {
+		position: relative;
+		width: 100%;
+		max-width: 320px;
+		top: 10%;
+		left: 0;
+	}
+}
+.form-download {
+	&__body {
+		padding: 20px 16px 16px 16px;
+		background-color: #ffffff;
+	}
+	&__row {
+		@include row;
+		&_margin_bottom_16 {
+			margin-bottom: 16px;
+		}
+
+		&_fdc {
+			flex-direction: column;
+		}
+		&_jcsb {
+			justify-content: space-between;
+		}
+	}
+	&__col-2 {
+		flex: 0 1 8.4%;
+	}
+	&__col-10 {
+		flex: 0 1 89%;
+	}
+	&__col-12 {
+		flex: 0 1 100%;
+	}
+	&__heading {
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 24px;
+		color: #26252b;
+	}
+	&__label {
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 20px;
+		color: #26252b;
+		margin-bottom: 8px;
+	}
+	&__button-close {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		&::before {
+			font-size: 24px;
+		}
+	}
+	&__input-text {
+		width: 100%;
+		padding: 12px;
+		background: #ffffff;
+		border: 1px solid #b7b7b7;
+		box-sizing: border-box;
+		border-radius: 4px;
+		margin-bottom: 16px;
+		&:last-child {
+			margin-bottom: 28px;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}

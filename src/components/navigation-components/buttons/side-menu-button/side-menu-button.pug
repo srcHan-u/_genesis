@@ -1,0 +1,5 @@
+- var side_menu_button_date = [{text: 'Календарь', icon: '_icon-calendar', href: "#"},{text: 'Обратная связь', icon: '_icon-feedback', href: "#"},{text: 'Помощь', icon: '_icon-help', href: "#"},{text: 'Публичные клубы', icon: '_icon-calendar', href: "./clubs.html"}]
+mixin side-menu-button(text, icons, href) 
+    .side-menu-button
+        a.side-menu-button__link(href=href class=icons)
+            span.side-menu-button__text|#{text} 

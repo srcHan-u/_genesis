@@ -1,0 +1,24 @@
+include ../buttons/side-menu-button/side-menu-button.pug
+include ../buttons/button/button.pug
+.side-menu 
+    .side-menu__wrapper
+        header.side-menu__header.header-side-menu
+            .header-side-menu__body 
+                .header-side-menu__row
+                    .header-side-menu__col-6
+                        button.header-side-menu__button-close._icon-close
+                    .header-side-menu__col-6
+                        include ../tabs/change-language-tab/change-language-tab.pug
+        .side-menu__body.body-side-menu
+            nav.body-side-menu__nav
+                ul.body-side-menu__list 
+                each val in side_menu_button_date
+                    li.body-side-menu__item
+                        +side-menu-button(val.text, val.icon, val.href)
+        
+        footer.side-menu__footer.footer-side-menu
+            .footer-side-menu__body 
+                .footer-side-menu__row
+                    .footer-side-menu__col-12
+                        +primary-button(button_border_red, text_signin, '', 'button-show-profile-header')
+                        +primary-button(button_border_silver, text_registration, '', 'button-show-registration')

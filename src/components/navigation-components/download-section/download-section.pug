@@ -1,0 +1,22 @@
+include ../buttons/button/button.pug
+.download-section.download-section_disable
+    form.download-section__form.form-download(action="#" method="POST") 
+        .form-download__body
+            .form-download__row.form-download__row_jcsb.form-download__row_margin_bottom_16
+                .form-download__col-10
+                    h2.form-download__heading|Скачать заявку
+                .form-download__col-2
+                    button.form-download__button-close._icon-close(type="reset" id="button-download_section-close")
+            .form-download__row.form-download__row_fdc
+                .form-download__col-12
+                    h5.form-download__label|Керівник клубу
+                .form-download__col-12
+                    input.form-download__input-text(type="text")
+            .form-download__row.form-download__row_fdc
+                .form-download__col-12
+                    h5.form-download__label|Представник
+                .form-download__col-12
+                    input.form-download__input-text(type="text")
+            .form-download__row
+                .form-download__col-12
+                    +primary-button(button_size_max, "Скачать в формате MSExcel", "submit", 'button-download_section-download')

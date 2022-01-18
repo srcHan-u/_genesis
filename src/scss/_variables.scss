@@ -1,0 +1,75 @@
+/* Global */
+$color-black: #000000;
+$color-white: #ffffff;
+$primary-dark: #26252b;
+$button-red: #ef1126;
+$button-silver: #9f9f9f;
+$font-family-primary: 'SourceSans-regular';
+$font-family-bold: 'SourceSans-semibold';
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 320;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+$fontSize: 14;
+$mainColor: #26252B;
+
+// :export{
+//     color-black: #000000;
+//     color-white: #ffffff;
+//     primary-dark: #26252b;
+//     button-red: #ef1126;
+//     button-silver: #9f9f9f;
+//     font-family-primary: 'SourceSans-regular';
+//     minWidth: 320px;
+//     maxWidth: 1920;
+//     maxWidthContainer: 320;
+//     md1: $maxWidthContainer + 12;
+//     md2: 991.98;
+//     md3: 767.98;
+//     md4: 479.98;
+//     mainColor:#26252B;
+//     fontSize: 14;
+//     font-family-bold: 'SourceSans-semibold';
+
+// }
+
+// /* Mixins */
+// $icons: 'calendar-gray', 'feedback', 'help', 'clubs';
+// :export{
+//     icons: 'calendar-gray', 'feedback', 'help', 'clubs';
+// }
+
+// /* Media */
+
+$smallMobileMaxScreenWidth: 374px; /* iphone5 */
+$mobileMinScreenWidth: 375px;
+$mobileMaxScreenWidth: 767px;
+$tabletMinScreenWidth: 768px;
+$tabletMaxScreenWidth: 1024px;
+$smallDesktopMinScreenWidth: 1025px;
+$smallDesktopMaxScreenWidth: 1279px;
+$midDesktopMinScreenWidth: 1280px;
+$midDesktopMaxScreenWidth: 1365px;
+$largeDesktopMinScreenWidth: 1366px;
+$largeDesktopMaxScreenWidth: 1919px;
+$extraLargeDesktopMinScreenWidth: 1920px;
+
+// :export{
+//     smallMobileMaxScreenWidth: 374px;
+//     mobileMinScreenWidth: 375px;
+//     mobileMaxScreenWidth: 767px;
+//     tabletMinScreenWidth: 768px;
+//     tabletMaxScreenWidth: 1024px;
+//     smallDesktopMinScreenWidth: 1025px;
+//     smallDesktopMaxScreenWidth: 1279px;
+//     midDesktopMinScreenWi: 1280px;
+//     midDesktopMaxScreenWidth: 1365px;
+//     largeDesktopMinScreenWidth: 1366px;
+//     largeDesktopMaxScreenWidth: 1919px;
+//     extraLargeDesktopMinScreenWidth: 1920px;
+// }
+

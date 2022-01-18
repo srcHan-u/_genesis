@@ -1,0 +1,9 @@
+- var card_clubs_date = [{heading:'КСЕ "Файтзона"', src: 'image-6'},{heading:'SС GRIFFON', src: 'image-7'},{heading:'GREKA MMA', src: 'image-8'},{heading:'Pereloma_mma', src: 'image-7'},{heading:'СК "БХГ"', src: 'image-9'}, {heading:'Nikko', src: 'image-10'}]
+mixin card-clubs( image, heading, width='280', height='220')
+    article.card-clubs 
+        figure.card-clubs__box
+            img.card-clubs__image(src=require(`./images/png/${image}.png`), alt=image width=width height=height)
+        h3.card-clubs__sub-title|#{heading}
+        .card-clubs__icon-box
+            h5.card-clubs__label._icon-pin|Киев
+            h5.card-clubs__label._icon-phone|+380(99)053-61-12

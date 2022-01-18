@@ -1,0 +1,15 @@
+.badge {
+	height: 24px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: center;
+	background: linear-gradient(0deg, rgba(237, 237, 237, 0.2), rgba(237, 237, 237, 0.2)), #ffffff;
+	position: relative;
+	border-radius: 20px;
+    
+	&__text {
+        padding: 4px 0px;
+        font-size: 12px;
+	}
+}

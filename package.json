@@ -1,0 +1,59 @@
+{
+  "name": "markup-boilerplate",
+  "version": "1.0.0",
+  "description": "markup-boilerplate",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "serve": "cross-env NODE_ENV=development webpack serve --mode development ",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "prettier": "prettier --write \"**/*.{js,html,scss}\""
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "license": "Unlicensed",
+  "devDependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.12.1",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^10.4.0",
+    "babel-loader": "^8.2.1",
+    "babel-plugin-import": "^1.13.1",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^4.3.0",
+    "mini-css-extract-plugin": "^1.6.2",
+    "postcss": "^8.4.5",
+    "postcss-loader": "^4.0.4",
+    "postcss-mixins": "^7.0.3",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.1.0",
+    "postcss-scss": "^4.0.2",
+    "postcss-variables": "^1.1.1",
+    "precss": "^4.0.0",
+    "prettier": "^2.2.0",
+    "pretty-quick": "^3.1.0",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.45.1",
+    "sass-loader": "^12.4.0",
+    "sass-resources-loader": "^2.2.4",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "cross-env": "^7.0.3",
+    "jquery": "^3.6.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

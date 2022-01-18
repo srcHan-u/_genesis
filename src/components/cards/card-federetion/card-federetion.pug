@@ -1,0 +1,24 @@
+
+- var card_federation_date_4 = [{icon: '_icon-pin', text: 'Украина, Киевская область'},{icon: '_icon-fight', text: 'Панкратион'},{icon: '_icon-subtract', text: 'fighteronline@gmail.com'},{icon: '_icon-phone', text: '+380(63)988-29-88'},]
+- var card_federation_date_2 = [{icon: '_icon-subtract', text: 'fighteronline@gmail.com'},{icon: '_icon-phone', text: '+380(63)988-29-88'}]
+mixin card-federation(image, label, heading, date)
+    article.card-federation 
+        figure.card-federation__header
+            .card-federation__row
+                if label == 'Помощник тренера'
+                else
+                    .card-federation__col-2
+                        img.card-federation__image(src=require(`./images/png/${image}.png`), alt=image)
+                .card-federation__col-9
+                    h5.card-federation__label|#{label}
+                    h3.card-federation__heading|#{heading}
+        .card-federation__body
+            ul.card-federation__list
+                if isTrue
+                    each val in card_federation_date_4
+                        li.card-federation__item
+                            a.card-federation__link(href="#" class=val.icon)|#{val.text}
+                else
+                    each val in card_federation_date_2
+                        li.card-federation__item
+                            a.card-federation__link(href="#" class=val.icon)|#{val.text}

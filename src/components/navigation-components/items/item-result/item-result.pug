@@ -1,0 +1,28 @@
+- var item_result_date_1 = ['Кулакова Аліна']
+- var item_result_date_2 = ['Кулакова Аліна','Турі Юлія']
+- var item_result_date_3 = ['Кулакова Аліна','Турі Юлія', 'Мамедова Аліна']
+mixin item-result(label, title, counter) 
+    article.item-result
+        .item-result__header.header-item-result
+            .header-item-result__row
+                .header-item-result__col-12 
+                    h5.header-item-result__label|#{label}
+                    h3.header-item-result__title|#{title}
+        .item-result__body.body-item-result
+            .body-item-result__row 
+                .body-item-result__col-11
+                    ul.body-item-result__list
+                        if counter == 1
+                            each val in item_result_date_1 
+                                li.body-item-result__item._icon-cup
+                                    h3.body-item-result__heading|#{val}
+                        else if counter == 2
+                            each val in item_result_date_2 
+                                li.body-item-result__item._icon-cup
+                                    h3.body-item-result__heading|#{val}
+                        else
+                            each val in item_result_date_3 
+                                li.body-item-result__item._icon-cup
+                                    h3.body-item-result__heading|#{val}
+                .body-item-result__col-1
+                    button.body-item-result__button._icon-arow

@@ -1,0 +1,54 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-calendar-event/card-calendar-event.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__events-my.events-my
+                ._container
+                    .events-my__body
+                        .events-my__row.events-my__row_margin_bottom
+                            .events-my__col-12
+                                h3.events-my__heading._icon-search|События
+                            .events-my__col-6
+                        .events-my__row.events-my__row_margin_bottom
+                            .events-my__col-12
+                                include components/navigation-components/tabs/multi-tabs/multi-tabs.pug
+                        .events-my__row
+                            .events-my__col-12
+                                ul.events-my__list.events-my__list_active(data-name='my-cards' data-show='true') 
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_red, '16', 'НОЯ',card_calendar_event_date_1)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '28', 'НОЯ', card_calendar_event_date_2)
+                                ul.events-my__list.events-my__list_active(data-name='upcoming-cards' data-show='false') 
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '16', 'НОЯ',card_calendar_event_date_1, 'card-calendar-event_border_green')
+                                    li.events-my__item
+                                        +card-calendar-event("Чемпіонат України з бойового самбо у розділах Лайт та Класичне", calendar_day_color_white, '28', 'НОЯ',card_calendar_event_date_2, 'card-calendar-event_border_green')
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '30', 'НОЯ', card_calendar_event_date_2)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '4', 'ДЕК', card_calendar_event_date_2)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '20', 'ДЕК', card_calendar_event_date_2)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '3', 'ЯНВ', card_calendar_event_date_2)
+                                ul.events-my__list.events-my__list_active(data-name='past-cards' data-show='false') 
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_red, '16', 'НОЯ',card_calendar_event_date_1)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '28', 'НОЯ', card_calendar_event_date_2)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '28', 'НОЯ', card_calendar_event_date_2)
+                                    li.events-my__item
+                                        +card-calendar-event("Турніру серед співробітників коворкінгу IHub з настільного тенісу", calendar_day_color_white, '28', 'НОЯ', card_calendar_event_date_2)
+
+        footer.events-my__footer 
+            .events-my__row
+                .events-my__col-12
+                    include ./components/navigation-components/tab-bar/tab-bar.pug

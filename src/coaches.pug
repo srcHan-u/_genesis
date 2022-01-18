@@ -1,0 +1,28 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include components/cards/card-federetion/card-federetion.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include ./components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__coaches.coaches
+                ._container
+                    .coaches__body
+                        .coaches__row
+                            .coaches__col-12 
+                                h3.coaches__heading|Тренера
+                        .coaches__row 
+                            .coaches__col-12
+                                - var isTrue = false;
+                                ul.coaches__list 
+                                    li.coaches__item
+                                        +card-federation('card-sportsmen-avatar-1','Главный тренер', 'Николай Петренко')
+                                    li.coaches__item 
+                                        +card-federation('card-federation-avatar-1','Помощник тренера', 'Эдуард Зайченко')
+        footer.coaches__footer 
+            .coaches__footer-row 
+                .coaches__footer-col-12
+                    include ./components/navigation-components/tab-bar/tab-bar.pug

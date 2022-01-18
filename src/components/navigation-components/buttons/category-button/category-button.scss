@@ -1,0 +1,26 @@
+.button-category {
+	width: 73px;
+	height: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #ffffff;
+	border: 1px solid #b7b7b7;
+	box-sizing: border-box;
+	border-radius: 20px;
+	font-size: 12px;
+	line-height: 16px;
+    font-family: $font-family-bold;
+    &:focus{
+        background-color: $button-red;
+		color: $color-white;
+    	border: 1px solid transparent;
+        transition: 0.7s;
+    }
+    // todo fd 04.03 remove ?
+	&_active {
+		background-color: $button-red;
+		color: $color-white;
+    	border: 1px solid transparent;
+	}
+}

@@ -1,0 +1,100 @@
+- var item_menu_date = [{link_href: './event-registration_2.html', icon: '_icon-results', link_text: 'Результаты события'}, {link_href: '#', icon: '_icon-invite', link_text: 'Пригласить региональные федерации'},{link_href: '#', icon: '_icon-list', link_text: 'Список участников'},{link_href: '#', icon: '_icon-assign', link_text: 'Присвоить результаты'},{link_href: '#', icon: '_icon-team', link_text: 'Командные результаты'},{link_href: './grid.html', icon: '_icon-grid', link_text: 'Сетки'},]
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/cards/card-weight-category/card-weight-category.pug
+include ./components/navigation-components/slick-slider/slick-slider.pug
+
+
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-default/header-default.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__event.event
+                ._container
+                    .event__body
+                        .event__row.event__row_position_relative
+                            .event__col-12.event__col-12_width_less
+                                p.event__text.event__text_box._icon-calendar-fill|12 октября 2021
+                                p.event__text.event__text_box._icon-pin|просп. П.Тичини 18, Легкоатлетичний манеж КМШВСМ, Київ, Украина
+                                a.event__link(href="#")|Посмотреть на карте
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12
+                                h2.event__sub-title|Чемпіонат України з бойового самбо у розділах Лайт та Класичне
+                                p.event__text|Розділ "Лайт"  дозволить спробувати початківцям свої сили на більш безпечному рівні. Особливостями цього розділу стане заборона на нанесення ударів руками в голову у стійці, заборона на удари колінами, заборона на удари в захваті за куртку та можливість проводити добивання в партері тільки з позицій «маунт» та «гарда», коли на килимі знаходяться обидва коліна спортсмена, що знаходиться зверху. Тобто забороняються добивання у партері збоку та зі спини. Ці нововведення дозволять у значній мірі знизити травматизм у новачків. У дітей 8-10 років тільки боротьба.
+                        .event__row.event__row_margin_bottom_8
+                            .event__col-12
+                                h3.event__heading|Категория Лайт
+                                p.event__text
+                                    |17 вересня 2021 року  
+                                    br
+                                    |13.00 – 19.00 – мандатна комісія зважування, жеребкування. 
+                                    br
+                                    |18 липня 2021 року
+                                    br
+                                    |до 09.00 – збір учасників;
+                                    br
+                                    |09.00 – 10.00 – суддівський семінар, час для розминки;
+                                    br
+                                    |10.00 – 15.00  – попередні поєдинки;
+                                    br
+                                    |15.00 – 20.00 – фінали, нагородження переможців.
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12.event__col-12_overflow_hidden
+                                +slider(4)
+                        .event__row.event__row_margin_bottom_8
+                            .event__col-12
+                                h3.event__heading|Категория Классик
+                                p.event__text
+                                    |18 вересня 2021 року  
+                                    br
+                                    |13.00 – 19.00 – мандатна комісія зважування, жеребкування. 
+                                    br
+                                    |19 липня 2021 року
+                                    br
+                                    |до 09.00 – збір учасників;
+                                    br
+                                    |09.00 – 10.00 – суддівський семінар, час для розминки;
+                                    br
+                                    |10.00 – 15.00  – попередні поєдинки;
+                                    br
+                                    |15.00 – 20.00 – фінали, нагородження переможців.
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12.event__col-12_overflow_hidden
+                                +slider(4)
+                        .event__row
+                            .event__col-12
+                                p.event__text.event__text_bold
+                                    |Благодійний стартовий безповоротній 
+                                    br
+                                    |внесок 
+                                    span - 300 грн.
+                                    |   Якщо спортсмен реєструється у два родзділи, внесок для другого буде складати
+                                    span 150 грн.
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12
+                                include ./components/navigation-components/items/notification/notification.pug
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12
+                                a(href="#").event__download-link
+                                    span._icon-download
+                                        |Нова редакція правил
+                                        br
+                                        | з бойового самбо
+                        .event__row.event__row_margin_bottom_16
+                            .event__col-12
+                                ul.event__list
+                                    each val in item_menu_date
+                                        li.event__item
+                                            +item-menu(val.link_href,val.icon, val.link_text)
+                        .event__row
+                            .event__col-12
+                                p.event__text.event__text_size_small|Підготовка місць проведення змагань здійснюється відповідно до постанови Кабінету Міністрів України від 18 грудня 1998 року № 2025 “Про порядок підготовки спортивних споруд та інших спеціально відведених місць для проведення масових спортивних та культурно-видовищних заходів” та з урахуванням постанови Кабінету Міністрів України від 22 липня 2020 року № 641 “Про встановлення карантину та запровадження поширених протиепідемічних заходів на території із значним поширенням гострої  респіраторної хвороби COVID-19, спричиненої коронавірусом SARS-CoV-2”   (зі змінами), а також за згодою на проведення чемпіонату України Управління фізичної культури і спорту (Київської міської державної адміністрації)
+
+        include ./components/footer/footer.pug
+        .event__button-footer
+            ._container
+                +primary-button(button_size_max, "Регистрация участников", '', 'button-show-event-registration')

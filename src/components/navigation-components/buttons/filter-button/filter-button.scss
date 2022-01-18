@@ -1,0 +1,25 @@
+.filter-button{
+    font-family: $font-family-bold;
+    font-size: 14px;
+    line-height: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    > span{
+        padding-left: 18px;
+    }
+    &::before{
+        position: absolute;
+        transform: rotate(90deg);
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        left: -10px;
+        top: -3px;
+    }
+    &:hover{
+        color: $button-red;
+        transition: 1s all;
+        transform: scale(1.02);
+    }
+}

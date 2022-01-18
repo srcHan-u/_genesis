@@ -1,0 +1,13 @@
+include ../../navigation-components/buttons/button/button.pug
+header.header-default
+    ._container
+        .header-default__body 
+            nav.header-default__nav
+                ul.header-default__list
+                    li.header-default__item 
+                        button#burgerMenu.header-default__burger
+                    li.header-default__item
+                        include ../../logo/logo.pug
+                    li.header-default__item.header-default__item_button
+                        +primary-button(button_border_red,text_signin, "", "button-show-profile")
+

@@ -1,0 +1,25 @@
+.single-tab{
+    &__list {
+        @include row;
+        border: 0.9px solid #ef1126;
+		border-radius: 4px;
+		overflow: hidden;
+	}
+	&__item {
+		@include column(50%);
+        text-align: center;
+        
+	}
+    &__button{
+        font-size: 0.85rem;
+		line-height: 16px;
+        width: 100%;
+        padding: 6px 0px;
+        display: block;
+        &:focus {
+            background-color: $button-red;
+            color: $color-white;
+            transition: 1s;
+        }
+    }
+}

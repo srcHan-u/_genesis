@@ -1,0 +1,26 @@
+- var href_link = './index.html'
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/header/header-inside/header-inside.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        main#ipage.page
+            section.page__filters.filters
+                .filters__body
+                    .filters__row
+                        .filters__col-12
+                            +header-inside('Фильтры', href_link)
+                            form.filters__form(action="#" method=POST)
+                                ul.filters__list
+                                    +item-selector('Вид спорта', './filters-sport.html')
+                                    +item-filter-one-item('Регион', 'Днепропетровск')
+                                    +item-filter-two-items('Возраст', '3') 
+                                    +item-selector('Временной диапазон', '#')
+                                .filters__row.filters__row_bg_white
+                                    +primary-button(button_size_max, 'Показать')
+
+
+

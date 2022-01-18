@@ -1,0 +1,13 @@
+- var button_color_red = 'primary-button_color_red';
+- var button_border_red = 'primary-button_border_red';
+- var button_border_silver = 'primary-button_border_silver';
+- var button_size_big = 'primary-button_size_big';
+- var button_size_medium = 'primary-button_size_medium';
+- var button_size_max = 'primary-button_size_max';
+- var text_registration = 'Регистрация'
+- var text_signin = 'Вход'
+- var text_reset = 'Очистить'
+- var text_result = 'ЗКС'
+
+mixin primary-button(className, text, type, id)
+    button.primary-button(class=className type=type id=id)|#{text}

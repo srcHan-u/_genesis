@@ -1,0 +1,141 @@
+@font-face {
+	font-family: 'icons';
+	src: url('../resources/icon-fonts/icons.eot?szb0y3');
+	src: url('../resources/icon-fonts/icons.eot?szb0y3#iefix') format('embedded-opentype'),
+		url('../resources/icon-fonts/icons.ttf?szb0y3') format('truetype'),
+		url('../resources/icon-fonts/icons.woff?szb0y3') format('woff'),
+		url('../resources/icon-fonts/icons.svg?szb0y3#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^='_icon-']::before,
+[class*=' _icon-']::before {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icons' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+._icon-place .path1:before {
+	content: '\e900';
+	color: rgb(236, 236, 236);
+}
+._icon-place .path2:before {
+	content: '\e901';
+	margin-left: -1em;
+	color: rgb(38, 37, 43);
+}
+
+._icon-add:before {
+	content: '\e902';
+}
+._icon-additional-menu:before {
+	content: '\e903';
+}
+._icon-arow:before {
+	content: '\e904';
+}
+._icon-arow:before,
+._icon-arow_left:before {
+	/* content: '\e904';
+	position: absolute;
+	top: 8%;
+	left: 0;
+	font-size: 18px; */
+	/* height: 4px;
+	width: 8px; */
+	/* border-radius: 2px;
+	transform: rotate(90deg); */
+}
+._icon-help:before {
+	content: url('../images/svg/help.svg');
+	position: relative;
+	left: -2px;
+	margin-right: 9px;
+}
+._icon-assign:before {
+	content: '\e905';
+}
+._icon-copy:before {
+	content: url('../images/svg/copy.svg');
+}
+._icon-calendar:before {
+	content: '\e906';
+}
+._icon-close:before {
+	content: '\e907';
+}
+._icon-club:before {
+	content: '\e908';
+}
+._icon-cup:before {
+	content: '\e90a';
+}
+._icon-date:before {
+	content: '\e90b';
+}
+._icon-download:before {
+	content: '\e90c';
+}
+._icon-exit:before {
+	content: '\e90d';
+}
+._icon-feedback:before {
+	content: '\e90e';
+}
+._icon-fight:before {
+	content: '\e90f';
+}
+._icon-grid:before {
+	content: '\e910';
+}
+._icon-invite:before {
+	content: '\e911';
+}
+._icon-list:before {
+	content: '\e912';
+}
+._icon-phone:before {
+	content: '\e913';
+}
+._icon-pin:before {
+	content: '\e914';
+}
+._icon-results:before {
+	content: '\e915';
+}
+._icon-search:before {
+	content: '\e916';
+}
+._icon-submenu:before {
+	content: '\e917';
+}
+._icon-subtract:before {
+	content: '\e918';
+}
+._icon-team:before {
+	content: '\e919';
+}
+._icon-tennis:before {
+	content: '\e91a';
+}
+._icon-union:before {
+	content: '\e91b';
+}
+._icon-user:before {
+	content: '\e91c';
+}
+
+._icon-popup::before {
+	content: url('../images/svg/popup-icon.svg');
+}

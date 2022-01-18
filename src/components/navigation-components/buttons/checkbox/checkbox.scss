@@ -1,0 +1,23 @@
+.checkbox {
+	position: relative;
+    display: none;
+	z-index: -1;
+	opacity: 0;
+	&:checked {
+		+ label {
+			background-color: #ef1126;
+			border: 1px solid #ef1126;
+			content: url('../images/svg/checkOn.svg');
+            padding: 3px 2px;
+		}
+	}
+}
+.label-checkbox {
+	padding: 7px ;
+	border: 1px solid #c4c4c4;
+	border-radius: 2px;
+	display: inline-flex;
+	align-items: center;
+	user-select: none;
+
+}

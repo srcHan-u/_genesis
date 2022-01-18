@@ -1,0 +1,33 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-federetion/card-federetion.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__profile.profile
+                ._container
+                    .profile__body
+                        .profile__row.profile__row_position_center
+                            .profile__col-12.profile__col-12_width_min 
+                                .profile__logo
+                                    img(src=require('./images/png/logo-profile.png'), alt="logo-profile")
+                        .profile__row
+                            .profile__col-12
+                                h5.profile__label._icon-pin|Украина, Киев
+                                h3.profile__heading|Спортивный клуб единоборств Киева "Nikko"
+                                p.profile__text|Тренировки для детей и взрослых с любым уровнем подготовки
+                        .profile__row.profile__row_margin_bottom
+                            .porfile__col-12 
+                                +card-federation('card-federation-avatar-1', 'Руководитель клуба', 'Константиновский Константин Михайлович')
+                        .profile__row
+                            .profile__col-12
+                                +item-menu('#', '_icon-copy', 'Скопировать пригласительную ссылку', '', 'show_copy_popup')
+        footer.profile__footer
+            .profile__footer-row
+                .profile__footer-col-12
+                    include ./components/navigation-components/tab-bar/tab-bar.pug
+                    +toaster

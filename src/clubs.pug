@@ -1,0 +1,20 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-clubs/card-clubs.pug
+//- 
+
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-default/header-default.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__clubs.clubs
+                .clubs__body
+                    +item-selector('Все регионы')
+                    ._container
+                        ul.clubs__list
+                            each val in card_clubs_date
+                                li.clubs__item
+                                        +card-clubs(val.src, val.heading)       
+        include ./components/footer/footer.pug

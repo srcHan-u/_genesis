@@ -1,0 +1,24 @@
+.multi-tabs {
+	&__list {
+		@include row;
+		border: 1px solid #ef1126;
+		border-radius: 4px;
+		margin: -1px -1px;
+		overflow: hidden;
+	}
+	&__item {
+		@include column(33.333%);
+		text-align: center;
+	}
+	&__button {
+		font-size: 0.85rem;
+		line-height: 16px;
+		width: 100%;
+		padding: 6px 0px;
+		display: block;
+	}
+	&__button[data-active='true'] {
+		background-color: $button-red;
+		color: $color-white;
+	}
+}

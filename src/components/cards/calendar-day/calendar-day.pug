@@ -1,0 +1,9 @@
+- var calendar_day_color_white = 'calendar-day_color_white '
+- var calendar_day_color_red = 'calendar-day_color_red'
+- var calendar_day_border_green = 'calendar-day_border_green'
+
+
+mixin calendar-day(className, day, months)
+    .calendar-day(class=className)
+        span.calendar-day__day|#{day}
+        span.calendar-day__months|#{months}

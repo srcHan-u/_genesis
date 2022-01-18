@@ -1,0 +1,15 @@
+.header-inside{
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    background-color: $color-white;
+
+    &__body{
+        padding: 12px 16px 12px 26px;
+    }
+    &__nav{}
+    &__list{
+        @include row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{}
+}

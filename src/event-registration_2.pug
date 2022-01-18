@@ -1,0 +1,52 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/navigation-components/items/item-result/item-result.pug
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__event-registration.event-registration
+                ._container
+                    .event-registration__body
+                        .event-registration__row
+                                .event-registration__col-12
+                                    a.event-registration__link.event-registration__link_arow_left._icon-arow(href="./event.html")
+                                        |Результаты события 
+                                        br 
+                                        |"Чемпіонат України з бойового самбо в розділі "Про-фул""
+                        .event-registration__row
+                            .event-registration__col-12
+                                +item-selector('Про-фул')
+                        .event-registration__row
+                            .event-registration__col-12
+                                ul.event-registration__list
+                                    li.event-registration__item
+                                        +item-result('Дівчата молодшого віку', 'до 22 кг', 3)
+                                    li.event-registration__item
+                                        +item-result('Дівчата молодшого віку', 'до 28 кг',1)
+                                    li.event-registration__item
+                                        +item-result('Хлопці молодшого віку', 'до 18 кг',2)
+                                    li.event-registration__item
+                                        +item-result('Хлопці молодшого віку', 'до 20 кг',1)
+                                    li.event-registration__item
+                                        +item-result('Хлопці молодшого віку', 'до 22 кг',1)
+                                    li.event-registration__item
+                                        +item-result('Дівчата молодшого віку', 'до 28 кг',3)
+                                    li.event-registration__item
+                                        +item-result('Хлопці молодшого віку', 'до 30 кг',1)
+                                    li.event-registration__item
+                                        +item-result('Хлопці молодшого віку', 'до 32 кг',1)
+                                    li.event-registration__item
+                                        +item-result('Дівчата старшого віку', 'до 28 кг',2)
+
+        footer.event-registration__footer
+            ._container
+                .event-registration__footer-row
+                    .event-registration__footer-col-12
+                        +primary-button(button_size_max, 'Загрузить результаты')
+
+                            

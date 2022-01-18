@@ -1,0 +1,36 @@
+.header-default{
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.08);
+    background-color: $color-white;
+    &__body{
+        padding: 12px 0px;
+    }
+    &__nav{
+    }
+    &__list{
+        @include row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+    &__item{
+        &_button{
+            flex: 0 1 18%;
+        }
+    }
+    &__burger{
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        &::before{
+            content:'';
+            background: url('../images/svg/burger.svg') no-repeat center;
+            position: absolute;
+            font-size: 24px;
+            width: 24px;
+            height: 24px;
+            top: 0;
+            left: 0;
+        }
+    }
+}

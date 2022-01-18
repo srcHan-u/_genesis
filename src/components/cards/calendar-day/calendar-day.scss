@@ -1,0 +1,26 @@
+.calendar-day {
+	height: 56px;
+	width: 44px;
+	border-radius: 4px;
+	font-family: $font-family-bold;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&_color_red {
+		background-color: $button-red;
+		color: $color-white;
+	}
+	&_color_white {
+		background-color: #f8f8f8;
+		color: $primary-dark;
+	}
+	&__day {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	&__months {
+		font-size: 14px;
+		line-height: 20px;
+	}
+}

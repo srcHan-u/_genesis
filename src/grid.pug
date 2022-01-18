@@ -1,0 +1,83 @@
+include ./components/navigation-components/buttons/button/button.pug
+include ./components/navigation-components/items/items.pug
+
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-club/header-club.pug
+        include ./components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__grid.grid
+                ._container
+                    .grid__row.grid__row_padding_0 
+                        .grid__col-12
+                            a.grid__link._icon-arow(href="./event.html")|Сетка  
+                    .grid__body
+                        table.grid__table
+                            tbody.grid__table-body
+                                tr.grid__row.grid__row_border_shadow
+                                    th.grid__col-5
+                                        h5.grid__label|Участник
+                                    th.grid__col-2.grid__col-2_padding_8
+                                        h5.grid__label|Круг 1 
+                                    th.grid__col-2
+                                        h5.grid__label|Круг 2 
+                                    th.grid__col-2
+                                        h5.grid__label|Круг 3 
+                                    th.grid__col-2
+                                        h5.grid__label|Баллы 
+                                tr.grid__row.grid__row_border_shadow
+                                    th.grid__col-5
+                                        h3.grid__heading|Ніколаєв Кирило
+                                        h5.grid__label|Кіровоградська область
+                                    th.grid__col-2.grid__col-2_bg_grey
+                                    th.grid__col-2.grid__col-2_padding_18
+                                        h5.grid__label
+                                            span|1(3)
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|1(3) 
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|5 
+                                tr.grid__row.grid__row_border_shadow
+                                    th.grid__col-5
+                                        h3.grid__heading|Середюк Богдан
+                                        h5.grid__label|Київ
+                                    th.grid__col-2.grid__col-2_padding_18
+                                        h5.grid__label
+                                            span|1(3)
+                                    th.grid__col-2.grid__col-2_bg_grey
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|1(3)
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|2
+                                tr.grid__row.grid__row_border_shadow
+                                    th.grid__col-5
+                                        h3.grid__heading|Анюканов Богдан
+                                        h5.grid__label|Херсонська область
+                                    th.grid__col-2.grid__col-2_padding_18
+                                        h5.grid__label
+                                            span|1(3)
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|1(3)
+                                    th.grid__col-2.grid__col-2_bg_grey
+                                    th.grid__col-2
+                                        h5.grid__label
+                                            span|8
+                    .grid__row.grid__row_padding_0.grid__row_position_relativ
+                        .grid__col-12
+                            nav#gridNavMenu.grid__nav(data-show='false')
+                                ul.grid__menu
+                                    li.grid__item
+                                        +item-selector-description("Раздел", "Про-фул", '_icon-club')
+                                    li.grid__item
+                                        +item-selector-description("Возрастная категория", "Юнаки старшого віку (2005-2006)", '_icon-user')
+                                    li.grid__item
+                                        +item-selector-description("Весовая категория", "до 45 кг", '_icon-results')
+                    .grid__row.grid__row_padding_0.grid__row_zindex_2
+                        .grid__col-12
+                            +primary-button(button_size_max,"Обновить")

@@ -1,0 +1,11 @@
+include ../../buttons/button/button.pug
+mixin item-result-person(title, label, label_2, modificator)
+    article.item-result-person
+        .item-result-person__body
+            .item-result-person__row
+                .item-result-person__col-10(class=modificator)
+                    h3.item-result-person__title|#{title}
+                    h5.item-result-person__label|#{label}  
+                    h5.item-result-person__label|#{label_2}  
+                .item-result-person__col-2
+                    +primary-button(button_border_red, text_result)

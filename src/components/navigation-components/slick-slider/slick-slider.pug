@@ -1,0 +1,6 @@
+include ../../cards/card-weight-category/card-weight-category.pug
+mixin slider(counter) 
+    .slider
+        - for(var i = 0; i < counter; i++)
+        +card-weight-category
+            

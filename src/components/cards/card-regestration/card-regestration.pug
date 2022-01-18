@@ -1,0 +1,19 @@
+include ../../navigation-components/buttons/checkbox/checkbox.pug
+- var card_regestration_date = ['Новак Ілля', 'Пахненко Даніїл', 'Плаксієнко Данило', 'Подмогильий Матвій', 'Плаксієнко Данил', 'Полтавецев Вадим', 'Харченко Євгеній', 'Шило Богдан', 'Шовкопляс Роман']
+mixin card-regestration(heading, label)
+     .card-regestration
+        .card-regestration__body
+            .card-regestration__row
+                .card-regestration__col-2
+                    h3.card-regestration__heading|#{heading}
+                    h5.card-regestration__label|#{label}
+                .card-regestration__col-2
+                    +checkbox(heading)
+        .card-regestration__body(data-name='card-slide' data-show='false')
+            .card-regestration__row.card-regestration__row_jcfs
+                .card-regestration__col-1
+                    include ../../navigation-components/buttons/category-button/category-button.pug
+                .card-regestration__col-1
+                    include ../../navigation-components/buttons/category-button/category-button.pug
+
+                

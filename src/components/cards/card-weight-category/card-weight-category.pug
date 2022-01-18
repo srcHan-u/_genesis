@@ -1,0 +1,33 @@
+include ../badge/badge.pug
+mixin card-weight-category
+    article.card-weight-category
+        header.card-weight-category__header.header-weight-category
+            .header-weight-category__body
+                .header-weight-category__row
+                    .header-weight-category__col-6
+                        h3.header-weight-category__heading|Дівчата молодшого віку
+                        h5.header-weight-category__label|2013–2013 (Ж)
+                    .header-weight-category__col-12._icon-union
+                        p.header-weight-category__date
+                            |12.10.2021 -
+                            br
+                            span|13:00
+                        p.header-weight-category__date
+                            |12.10.2021
+                            br
+                            span|19:00
+                    .header-weight-category__col-4
+                        h5.header-weight-category__label|Весовые категории
+        .card-weight-category__body.body-weight-category
+            .body-weight-category__content
+                ul.body-weight-category__grid
+                    -var badge_text = ['до 18 кг','до 20 кг','до 22 кг','до 24 кг','до 26 кг','до 28 кг','до 30 кг','до 32 кг','до 34 кг','до 36 кг','понад 39 кг',]
+                    each val in badge_text 
+                        li.body-weight-category__item
+                            +badge(val)
+        footer.card-weight-category__footer.footer-weight-category
+            .footer-weight-category__body
+                .footer-weight-category__row
+                    .footer-weight-category__col-3
+                        p.footer-weight-category__cost|300.00 грн
+

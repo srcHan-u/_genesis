@@ -1,0 +1,39 @@
+include ../buttons/checkbox/checkbox.pug
+mixin item-menu(link_href, icon, link_text, modificator, id)
+        a.item-menu(href=link_href class=icon class=modificator id=id)
+            span.item-menu__text|#{link_text}  
+
+mixin item-selector(text,href)
+    li.item-selector
+        a.item-selector__button._icon-arow(href=href)
+            span.item-selector__text|#{text}
+
+mixin item-filter-two-items(text, counter)
+    li.item-filter-two-items
+        button.item-filter-two-items__button._icon-arow
+            span.item-filter-two-items__text|#{text}
+            span.item-filter-two-items__counter|#{counter}
+
+mixin item-filter-one-item(text, label)
+    li.item-filter-one-items
+        button.item-filter-one-items__button._icon-arow
+            span.item-filter-one-items__text|#{text}
+            span.item-filter-one-items__label|#{label}
+
+mixin item-list(heading)
+    li.item-list
+        h3.item-list__heading|#{heading}
+        +checkbox(heading, heading, heading)
+
+mixin item-selector-description(label,heading, icon)
+        .item-selector-description(class=icon)
+            h5.item-selector-description__label|#{label}
+            h3.item-selector-description__heading|#{heading}
+mixin item-field
+    .item-field
+        .item-field__body
+            .item-field__title|Керівник клубу
+mixin toaster
+    .toaster.toaster_disable
+        .toaster__body
+            p.toaster__text|Ссылка скопирована

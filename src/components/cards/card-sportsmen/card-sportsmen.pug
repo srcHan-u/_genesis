@@ -1,0 +1,15 @@
+include ../../navigation-components/buttons/checkbox/checkbox.pug
+- var card_sportsmen_date = [{image: 'card-sportsmen-avatar-1', heading: 'Харченко Євгеній', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-2', heading: 'Плаксієнко Данило', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-3', heading: 'Шило Богдан', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-4', heading: 'Шовкопляс Роман', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-5', heading: 'Пахненко Даніїл', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-6', heading: 'Полтавецев Вадим', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-7', heading: 'Новак Ілля', label: '26 лет, КМС'},{image: 'card-sportsmen-avatar-8', heading: 'Подмогильий Матвій', label: '26 лет, КМС'}]
+mixin card-sportsmen(image,heading,label)
+    article.card-sportsmen
+        .card-sportsmen__body
+            .card-sportsmen__row
+                .card-sportsmen__col-1
+                    +checkbox(heading)
+                .card-sportsmen__col-2
+                    img.card-sportsmen__avatar(src=require(`./images/png/${image}.png`), alt=image)
+                .card-sportsmen__col-6
+                    h3.card-sportsmen__heading|#{heading}
+                    h5.card-sportsmen__label|#{label}
+                .card-sportsmen__col-3
+                    button.card-sportsmen__additional-menu._icon-additional-menu

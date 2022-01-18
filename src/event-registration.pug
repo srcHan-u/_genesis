@@ -1,0 +1,47 @@
+//- mixins
+include ./components/navigation-components/items/items.pug
+include ./components/cards/card-regestration/card-regestration.pug
+include ./components/navigation-components/buttons/button/button.pug
+
+//- 
+include ./components/head/head.pug
+body#ihomepage.homepage
+    ._wrapper
+        include ./components/header/header-default/header-default.pug
+        include components/navigation-components/side-bar-menu/side-bar-menu.pug
+        main#ipage.page
+            section.page__registration.registration
+                ._container
+                    .registration__top.top-registration
+                        .top-registration__row
+                            .top-registration__col-12.top-registration__col-12_margin_bottom
+                                a.top-registration__sub-title._icon-arow(href='./event.html')|Регистрация
+                        .top-registration__row
+                            .top-registration__col-12.top-registration__col-12_padding
+                                h3.top-registration__heading|Чемпіонат України з бойового самбо у розділах Лайт та Класичне
+                                p.top-registration__text|Крайний срок регистрации:
+                                    br 
+                                    span.top-registration__label|31.10.2022
+
+                    .registration__middle.middle-registration
+                        .middle-registration__row 
+                            .middle-registration__col-12
+                                h3.middle-registration__heading|Чоловіки
+                        .middle-registration__row 
+                            .middle-registration__col-12
+                                ul.middle-registration__list
+                                    each val in card_regestration_date
+                                        li.middle-registration__item
+                                            +card-regestration(val, '26 лет, 1996')
+                        .middle-registration__row
+                            .middle-registration__col-12
+                                +item-menu('#', '_icon-download', 'Скачать заявку', 'item-menu_icon_red', 'show-download-popup')
+
+                    include ./components/popup/popup.pug
+                    include ./components/navigation-components/download-section/download-section.pug
+
+        footer.registration__footer.footer-registration
+            .footer-registration__row
+                .footer-registration__col-12
+                    +primary-button(button_size_max, "Заявить (0)","", "button-event_page-show_download_popup")
+

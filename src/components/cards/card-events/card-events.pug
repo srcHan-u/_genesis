@@ -1,0 +1,11 @@
+- var card_events_properties = [{heading:'Чемпіонат України з бойового самбо у розділах Лайт та Класичне', image: '1', href: './event.html'}, {heading: 'BRAVE KIDS PRO OPEN CHAMPIONSHIP', image: '2', href: '#'},{heading: 'Extreme Cage Fighting | Rage In The Cage', image: '3', href: '#'},{heading: 'The Martial Arts World Showcase 2021 - Series #5', image: '4', href: '#'},{heading: 'BSB JJ 3 открытый чемпионат', image: '5', href: '#'}]
+
+mixin card-events(heading, image, href, width='280', height='140', )
+    article.card-events 
+        a.card-events__box(href=href)
+            img.card-events__image(src=require(`./images/png/image-${image}.png`), alt=`image-${image}` width=width height=height)
+        h3.card-events__heading|#{heading}
+        .card-events__icon-box
+            h5.card-events__label._icon-pin|Днепропетровск
+            h5.card-events__label._icon-union|12 октября 2021
+
